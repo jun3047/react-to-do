@@ -1,8 +1,9 @@
 import * as React from 'react';
 import { Helmet } from 'react-helmet-async';
 import styled from 'styled-components';
+import TodoInput from './components/todo';
 
-const Warp = styled.div`
+const Warpper = styled.div`
   margin: 0;
   padding: 0;
   width: 100vw;
@@ -46,14 +47,15 @@ export function HomePage() {
         <title>Maian</title>
         <meta name="description" content="To Do main임" />
       </Helmet>
-      <Warp>
+      <Warpper>
         <Main>
           <Title>To-Do</Title>
+          <TodoInput />
           <TodoList>
             <TodoItem><CheckBox type= 'checkbox'></CheckBox>이거해야함</TodoItem>
           </TodoList>
         </Main>
-      </Warp>
+      </Warpper>
     </>
   );
 }
